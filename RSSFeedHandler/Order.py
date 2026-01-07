@@ -4,3 +4,5 @@ class Order:
     Order_Date = None
     Summary = None
     Classifcation = None
+    def __init__(self):
+        pass
