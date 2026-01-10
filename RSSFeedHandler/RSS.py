@@ -12,14 +12,13 @@ class RSSFeed:
         for i in feed['entries']:
             lst.append({
                 'title': i['title'],
-
+                'link':i['link'],
+                'Summary':i['summary'],
+                'Date': i['title'][-10:]
                 })
         return lst
 
-
-
     def print_orders(self):
         return self.orders
-
     def list_par(self):
         print(self.orders.keys())
