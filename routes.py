@@ -10,7 +10,9 @@ ll = Classifier.Classifier(1)
 
 @router.get("/orders")
 async  def get_orders():
-    return {"Res": RSSHandler.get_orders()}
+    data = RSSHandler.get_orders()
+    return {"Res":data,
+            "type":str(type(data))}
 
 @router.get("/jsontest")
 async def get_json():
