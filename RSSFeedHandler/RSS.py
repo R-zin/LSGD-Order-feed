@@ -1,6 +1,7 @@
 import feedparser
 class RSSFeed:
     orders = []
+    processed_orders = []
     def __init__(self):
         self.get_orders()
 
@@ -16,9 +17,12 @@ class RSSFeed:
                 'Summary':i['summary'],
                 'Date': i['title'][-10:]
                 })
-        return lst
-
+        self.processed_orders = lst
+    def get_no_of_orders(self,start=0,num = 8):
+        return self.processed_orders[start:num]
     def print_orders(self):
         return self.orders
     def list_par(self):
         print(self.orders.keys())
+    def get_len(self):
+        return len(self.processed_orders)
