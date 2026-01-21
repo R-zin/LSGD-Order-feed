@@ -25,7 +25,7 @@ function Hero() {
   <div className="absolute inset-0 z-10 flex items-center justify-center m-auto">
   <SplitText
     className="text-9xl font-semibold text-center text-white"
-    text="Work in Progress"
+    text="Tired of Waiting for Govt Orders?"
     delay={100}
     duration={0.6}
     ease="power3.out"
